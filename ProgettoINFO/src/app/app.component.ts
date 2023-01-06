@@ -8,7 +8,14 @@ import * as mysql from 'mysql';
 })
 export class AppComponent {
   title = 'ProgettoINFO';
+  data : any;
+
+  async getVerificaBottone(){
+  this.data = await getVerifiche()
+  console.log(this.data)
+  }
 }
+
 
 async function connessione() {
   const connection = mysql.createConnection({
